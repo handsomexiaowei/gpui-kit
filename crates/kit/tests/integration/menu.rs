@@ -506,6 +506,7 @@ fn press_context_menu_key(handle: AnyWindowHandle, key: &str, cx: &mut TestAppCo
     cx.update_window(handle, |_, window, cx| {
         window.dispatch_event(
             KeyDownEvent {
+                shift_digit: None,
                 keystroke: keystroke.clone(),
                 is_held: false,
                 prefer_character_input: false,

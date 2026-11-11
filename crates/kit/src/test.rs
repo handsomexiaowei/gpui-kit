@@ -535,6 +535,7 @@ fn press_key(window: &mut Window, key: Keystroke, cx: &mut App) {
     let key = if matches!(key.key.as_str(), "enter" | "tab") {
         window.dispatch_event(
             KeyDownEvent {
+                shift_digit: None,
                 keystroke: key.clone(),
                 is_held: false,
                 prefer_character_input: false,

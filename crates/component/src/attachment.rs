@@ -1814,6 +1814,7 @@ mod tests {
             cx.update(|window, cx| assert!(window.focused(cx).is_some()));
             let keystroke = Keystroke::parse("enter").unwrap();
             cx.simulate_event(KeyDownEvent {
+                shift_digit: None,
                 keystroke: keystroke.clone(),
                 is_held: false,
                 prefer_character_input: false,

@@ -136,6 +136,7 @@ fn controlled_change_callbacks_preserve_activation_and_replace_aliases(cx: &mut 
                 for key in ["enter", "space"] {
                     let keystroke = Keystroke::parse(key).unwrap();
                     visual.simulate_event(KeyDownEvent {
+                        shift_digit: None,
                         keystroke: keystroke.clone(),
                         is_held: false,
                         prefer_character_input: false,
@@ -195,6 +196,7 @@ fn owner_applies_requested_value_before_the_next_activation(cx: &mut TestAppCont
     });
     let keystroke = Keystroke::parse("space").unwrap();
     visual.simulate_event(KeyDownEvent {
+        shift_digit: None,
         keystroke: keystroke.clone(),
         is_held: false,
         prefer_character_input: false,

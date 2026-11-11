@@ -2095,6 +2095,7 @@ mod tests {
         let os = cx.update(|_, cx| cx.platform_info().os);
         let keystroke = Keystroke::parse_with_os(key, os).unwrap();
         cx.simulate_event(KeyDownEvent {
+            shift_digit: None,
             keystroke: keystroke.clone(),
             is_held: false,
             prefer_character_input: false,

@@ -55,7 +55,7 @@ impl Lsp {
     ///
     /// Returns non-empty byte ranges and colors. Ranges that become empty or
     /// inverted after position conversion are ignored.
-    pub(crate) fn document_colors_for_range(
+    pub fn document_colors_for_range(
         &self,
         text: &Rope,
         visible_range: &Range<usize>,

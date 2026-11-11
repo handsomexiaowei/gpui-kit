@@ -370,6 +370,7 @@ mod tests {
             let keystroke =
                 cx.update(|_, cx| Keystroke::parse_with_os(key, cx.platform_info().os).unwrap());
             cx.simulate_event(KeyDownEvent {
+                shift_digit: None,
                 keystroke: keystroke.clone(),
                 is_held: false,
                 prefer_character_input: false,
@@ -433,6 +434,7 @@ mod tests {
         let keystroke =
             cx.update(|_, cx| Keystroke::parse_with_os(key, cx.platform_info().os).unwrap());
         cx.simulate_event(KeyDownEvent {
+            shift_digit: None,
             keystroke: keystroke.clone(),
             is_held: false,
             prefer_character_input: false,

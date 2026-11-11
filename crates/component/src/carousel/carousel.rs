@@ -1279,6 +1279,7 @@ mod tests {
         cx.update(|window, cx| window.draw(cx).clear(cx));
         let keystroke = gpui::Keystroke::parse("enter").unwrap();
         cx.simulate_event(gpui::KeyDownEvent {
+            shift_digit: None,
             keystroke: keystroke.clone(),
             is_held: false,
             prefer_character_input: false,

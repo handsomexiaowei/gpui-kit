@@ -778,6 +778,7 @@ mod tests {
         });
         let keystroke = Keystroke::parse("space").unwrap();
         cx.simulate_event(KeyDownEvent {
+            shift_digit: None,
             keystroke: keystroke.clone(),
             is_held: false,
             prefer_character_input: false,
